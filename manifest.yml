@@ -1,0 +1,8 @@
+---
+applications:
+ - name: flask-blog
+   random-route: true
+   memory: 128M
+   #disk_quota: 512M
+   buildpacks:
+   - python_buildpack

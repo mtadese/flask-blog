@@ -1,3 +1,4 @@
+import os, logging
 import sqlite3
 from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
@@ -24,11 +25,17 @@ def index():
     conn = get_db_connection()
     posts = conn.execute('SELECT * FROM posts').fetchall()
     conn.close()
+
+    ## log line
+    app.logger.info('blog page-load successfull')
     return render_template('index.html', posts=posts)
 
 @app.route('/<int:post_id>')
 def post(post_id):
     post = get_post(post_id)
+
+    ## log line
+    app.logger.info('selected-blog page-load successfull')
     return render_template('post.html', post=post)
 
 @app.route('/create', methods=('GET', 'POST'))
@@ -45,6 +52,9 @@ def create():
                          (title, content))
             conn.commit()
             conn.close()
+
+            ## log line
+            app.logger.info('new-blog-post page-load successfull')
             return redirect(url_for('index'))
 
     return render_template('create.html')
@@ -66,6 +76,9 @@ def edit(id):
                          (title, content, id))
             conn.commit()
             conn.close()
+
+            ## log line
+            app.logger.info('edit-blog-post page-load successfull')
             return redirect(url_for('index'))
 
     return render_template('edit.html', post=post)
@@ -78,12 +91,26 @@ def delete(id):
     conn.commit()
     conn.close()
     flash('"{}" was successfully deleted!'.format(post['title']))
+
+    ## log line
+    app.logger.info('delete-blog-post page-load successfull')
     return redirect(url_for('index'))
 
 @app.route('/about')
 def about():    
+
+    ## log line
+    app.logger.info('about-blog-app page-load successfull')
     return render_template('about.html')
 
 
 if __name__ == "__main__":
+
+    ## stream logs to app.log file
+    logging.basicConfig(filename='app.log',level=logging.DEBUG)
+
+    #declare to locally run python app on port 8080
+    port = int(os.getenv("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
+    
     app.run(debug=True)

@@ -1,0 +1,42 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.0.2.15:8080/ (Press CTRL+C to quit)
+INFO:app:blog page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 04:53:37] "GET / HTTP/1.1" 200 -
+INFO:app:about-blog-app page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 04:53:39] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 04:53:42] "GET /create HTTP/1.1" 200 -
+INFO:app:blog page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 04:53:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 04:53:48] "GET /1/edit HTTP/1.1" 200 -
+INFO:app:blog page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 04:54:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 04:55:06] "[33mGET /e HTTP/1.1[0m" 404 -
+INFO:app:blog page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 04:55:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.0.2.15:8080/ (Press CTRL+C to quit)
+INFO:app:blog page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 05:09:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.0.2.15:8080/ (Press CTRL+C to quit)
+INFO:app:about-blog-app page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 05:16:00] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 05:16:04] "GET /create HTTP/1.1" 200 -
+INFO:app:blog page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 05:16:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.0.2.15:8080/ (Press CTRL+C to quit)
+INFO:app:about-blog-app page-load successfull
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 05:34:01] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
